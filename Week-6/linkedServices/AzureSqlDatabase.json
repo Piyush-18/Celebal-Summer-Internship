@@ -1,0 +1,9 @@
+{
+  "name": "AzureSQL_HR_DataWarehouse",
+  "properties": {
+    "type": "AzureSqlDatabase",
+    "typeProperties": {
+      "connectionString": "Server=tcp:hr-datawarehouse.database.windows.net,1433;Initial Catalog=HRWarehouse;Persist Security Info=False;User ID=azure_admin;Password=YourSecurePassword!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    }
+  }
+}

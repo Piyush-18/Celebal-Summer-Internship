@@ -1,0 +1,42 @@
+{
+  "name": "Monthly_LastSaturday_Trigger",
+  "properties": {
+    "type": "ScheduleTrigger",
+    "typeProperties": {
+      "recurrence": {
+        "frequency": "Month",
+        "interval": 1,
+        "schedule": {
+          "minutes": [
+            0
+          ],
+          "hours": [
+            0
+          ],
+          "weekDays": [
+            "Saturday"
+          ],
+          "monthlyOccurrences": [
+            {
+              "day": "Saturday",
+              "occurrence": -1
+            }
+          ]
+        },
+        "startTime": "2024-01-01T00:00:00Z",
+        "timeZone": "UTC"
+      }
+    },
+    "pipelines": [
+      {
+        "pipelineReference": {
+          "referenceName": "Incremental_Employee_DataSync",
+          "type": "PipelineReference"
+        },
+        "parameters": {
+          "lastModified": "@{formatDateTime(addDays(utcNow(), -1), 'yyyy-MM-ddTHH:mm:ss')}"
+        }
+      }
+    ]
+  }
+}

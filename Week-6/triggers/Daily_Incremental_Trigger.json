@@ -1,0 +1,25 @@
+{
+  "name": "Daily_Incremental_Trigger",
+  "properties": {
+    "type": "ScheduleTrigger",
+    "typeProperties": {
+      "recurrence": {
+        "frequency": "Day",
+        "interval": 1,
+        "startTime": "2024-01-01T00:00:00Z",
+        "timeZone": "UTC"
+      }
+    },
+    "pipelines": [
+      {
+        "pipelineReference": {
+          "referenceName": "Incremental_Employee_DataSync",
+          "type": "PipelineReference"
+        },
+        "parameters": {
+          "lastModified": "@{formatDateTime(addDays(utcNow(), -1), 'yyyy-MM-ddTHH:mm:ss')}"
+        }
+      }
+    ]
+  }
+}

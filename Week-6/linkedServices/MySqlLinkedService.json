@@ -1,0 +1,15 @@
+{
+  "name": "MySQL_Local_OnPrem",
+  "properties": {
+    "type": "MySql",
+    "typeProperties": {
+      "server": "127.0.0.1",
+      "database": "EmployeeRecords",
+      "userName": "admin_user",
+      "password": {
+        "type": "SecureString",
+        "value": "admin@123"
+      }
+    }
+  }
+}

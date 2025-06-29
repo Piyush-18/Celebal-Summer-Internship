@@ -1,0 +1,13 @@
+{
+  "name": "AzureSQL_Employees_Prod",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "AzureSQL_HR_DataWarehouse",
+      "type": "LinkedServiceReference"
+    },
+    "type": "Tabular",
+    "typeProperties": {
+      "tableName": "Employees"
+    }
+  }
+}

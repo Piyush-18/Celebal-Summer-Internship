@@ -1,0 +1,31 @@
+{
+  "name": "Initial_Employee_DataLoad",
+  "properties": {
+    "activities": [
+      {
+        "name": "FullCopyEmployees",
+        "type": "Copy",
+        "inputs": [
+          {
+            "referenceName": "MySQL_Employees_Staging",
+            "type": "DatasetReference"
+          }
+        ],
+        "outputs": [
+          {
+            "referenceName": "AzureSQL_Employees_Prod",
+            "type": "DatasetReference"
+          }
+        ],
+        "typeProperties": {
+          "source": {
+            "type": "RelationalSource"
+          },
+          "sink": {
+            "type": "SqlSink"
+          }
+        }
+      }
+    ]
+  }
+}

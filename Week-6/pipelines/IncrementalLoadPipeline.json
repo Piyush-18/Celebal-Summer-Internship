@@ -1,0 +1,39 @@
+{
+  "name": "Incremental_Employee_DataSync",
+  "properties": {
+    "parameters": {
+      "lastModified": {
+        "type": "String"
+      }
+    },
+    "activities": [
+      {
+        "name": "IncrementalCopy",
+        "type": "Copy",
+        "inputs": [
+          {
+            "referenceName": "MySQL_Employees_Staging",
+            "type": "DatasetReference",
+            "parameters": {
+              "query": "SELECT * FROM Employees WHERE LastModified > '@{pipeline().parameters.lastModified}'"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "referenceName": "AzureSQL_Employees_Prod",
+            "type": "DatasetReference"
+          }
+        ],
+        "typeProperties": {
+          "source": {
+            "type": "RelationalSource"
+          },
+          "sink": {
+            "type": "SqlSink"
+          }
+        }
+      }
+    ]
+  }
+}

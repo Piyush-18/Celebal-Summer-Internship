@@ -1,0 +1,13 @@
+{
+  "name": "MySQL_Employees_Staging",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "MySQL_Local_OnPrem",
+      "type": "LinkedServiceReference"
+    },
+    "type": "Tabular",
+    "typeProperties": {
+      "tableName": "Employees"
+    }
+  }
+}
