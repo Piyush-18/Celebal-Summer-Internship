@@ -1,0 +1,6 @@
+{
+  "name": "df_CUST_MSTR",
+  "type": "MappingDataFlow",
+  "sources": ["DelimitedText1"],
+  "sinks": ["AzureSqlTable1"]
+}

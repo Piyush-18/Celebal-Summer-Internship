@@ -1,0 +1,18 @@
+{
+  "name": "pl_CUST_MSTR_load",
+  "type": "Pipeline",
+  "activities": [
+    {
+      "name": "Data Flow Activity",
+      "type": "ExecuteDataFlow",
+      "dependsOn": [],
+      "userProperties": [],
+      "typeProperties": {
+        "dataFlow": {
+          "referenceName": "df_CUST_MSTR",
+          "type": "DataFlowReference"
+        }
+      }
+    }
+  ]
+}

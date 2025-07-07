@@ -1,0 +1,4 @@
+ParentID,ChildID,RelationshipType
+1,101,TypeA
+2,201,TypeB
+3,301,TypeC
