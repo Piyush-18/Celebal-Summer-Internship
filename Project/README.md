@@ -37,8 +37,6 @@ A simple Python script that connects to a MySQL database, retrieves data from an
 ├── fetch_employees.py       # Main Python script
 ├── requirements.txt         # Python dependencies
 ├── mysql_setup.sql          # SQL to create DB, table, and sample data
-├── add_more_employees.sql   # SQL to insert additional data
-├── .env                     # Environment file (not committed)
 └── README.md                # This file
 ```
 
